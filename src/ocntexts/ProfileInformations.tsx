@@ -97,6 +97,7 @@ function ProfileInformationProvider({children}: Props) {
             ...prevState,
             [information]: true,
         }));
+
         if (
             information === "experiences" ||
             information === "hobbies" ||
@@ -108,6 +109,7 @@ function ProfileInformationProvider({children}: Props) {
             information === "training")
         {
             setNewInformation(true);
+            console.log('here')
             return true;
         }
 

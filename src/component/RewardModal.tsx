@@ -58,14 +58,16 @@ function RewardModal ({reward}: Props) {
         return null
     }
 
-    <div className="mt-10 text-center italic font-light ">
-        <p className="pb-3 text-xl font-bold mb-2 sm:text-2xl">{DISPLAY_TEXT(reward)}</p>
-        <div className="p-2 border-2 border-white inline-block">
-            <p onClick={handleClick} className="text-lg sm:text-xl cursor-pointer inline-block font-light border-white border-2 px-5 py-2 transition-all duration-300 text-white hover:bg-white hover:text-black">
-                Consultez votre profil pour le voir
-            </p>
+    return (
+        <div className="mt-10 text-center italic font-light ">
+            <p className="pb-3 text-xl font-bold mb-2 sm:text-2xl">{DISPLAY_TEXT(reward)}</p>
+            <div className="p-2 border-2 border-white inline-block">
+                <p onClick={handleClick} className="text-lg sm:text-xl cursor-pointer inline-block font-light border-white border-2 px-5 py-2 transition-all duration-300 text-white hover:bg-white hover:text-black">
+                    Consultez votre profil pour le voir
+                </p>
+            </div>
         </div>
-    </div>
+    )
 }
 
 export default RewardModal;
