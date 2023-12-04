@@ -37,11 +37,9 @@ function ProfileExperiences() {
 
             <div className="mb-3">
                 <ProfileRunningText>2022 - 2023</ProfileRunningText>
-                <ProfileSubHeader title="Réalisation de professions de foi et d’assets visuels pour le syndicat Force Ouvrière" />
+                <ProfileSubHeader title="Graphiste print & numérique/Webdesigner/Pigiste freelance" />
                 <ProfileRunningText className="pl-12">
-                    Réalisation d’objets imprimés, refonte graphique et modernisation
-                    de plusieurs professions de foi pour les élections de CE tout en
-                    respectant la charte graphique existant du syndicat.
+                    Réalisation d’objets imprimés, de refontes et de modernisations graphiques, d’outils de communications adaptés, et de conception d’identités visuelles, mise en place d’outil d’UX design.
                 </ProfileRunningText>
             </div>
 
