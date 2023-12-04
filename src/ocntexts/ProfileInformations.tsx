@@ -11,6 +11,7 @@ type ContextType = {
     updateInformations: (inforamtion: Information) => boolean;
     newInformation: boolean;
     closeNewInformation: () => void;
+    resetInformations: () => void,
 }
 
 type Informations = {
@@ -18,11 +19,12 @@ type Informations = {
     experiences: boolean;
     hobbies: boolean;
     informations: boolean;
-    knowHow: boolean;
     skills: boolean;
     training: boolean;
 
     observezParLaFenetre: boolean;
+    vuLEauDuSeau: boolean;
+    vuLesMiroirs: boolean;
     visiterLAbysse: boolean;
     choixDeLaMontre: boolean;
     choixDuCarnet: boolean;
@@ -33,11 +35,12 @@ export type Information =
     "experiences" |
     "hobbies" |
     "informations" |
-    "knowHow" |
     "skills" |
     "training" |
 
     "observezParLaFenetre" |
+    "vuLEauDuSeau" |
+    "vuLesMiroirs" |
     "visiterLAbysse" |
     "choixDeLaMontre" |
     "choixDuCarnet";
@@ -49,11 +52,12 @@ const ProfileInformationContext = createContext<ContextType>({
         experiences: false,
         hobbies: false,
         informations: false,
-        knowHow: false,
         skills: false,
         training: false,
-
+        
         observezParLaFenetre: false,
+        vuLEauDuSeau: false,
+        vuLesMiroirs: false,
         visiterLAbysse: false,
         choixDeLaMontre: false,
         choixDuCarnet: false,
@@ -61,6 +65,7 @@ const ProfileInformationContext = createContext<ContextType>({
     updateInformations: () => false,
     newInformation: false,
     closeNewInformation: () => {},
+    resetInformations: () => {}
 });
 
 function ProfileInformationProvider({children}: Props) {
@@ -69,11 +74,12 @@ function ProfileInformationProvider({children}: Props) {
         experiences: false,
         hobbies: false,
         informations: false,
-        knowHow: false,
         skills: false,
         training: false,
 
         observezParLaFenetre: false,
+        vuLEauDuSeau: false,
+        vuLesMiroirs: false,
         visiterLAbysse: false,
         choixDeLaMontre: false,
         choixDuCarnet: false,
@@ -95,8 +101,9 @@ function ProfileInformationProvider({children}: Props) {
             information === "experiences" ||
             information === "hobbies" ||
             information === "informations" ||
-            information === "knowHow" ||
             information === "profilePicture" ||
+            information === "vuLEauDuSeau" ||
+            information === "vuLesMiroirs" ||
             information === "skills" ||
             information === "training")
         {
@@ -107,16 +114,36 @@ function ProfileInformationProvider({children}: Props) {
         return false;
     }, [informations]);
 
+    const resetInformations = useCallback(() =>  {
+        setInformations({
+            profilePicture: false,
+            experiences: false,
+            hobbies: false,
+            informations: false,
+            skills: false,
+            training: false,
+            
+            observezParLaFenetre: false,
+            vuLEauDuSeau: false,
+            vuLesMiroirs: false,
+            visiterLAbysse: false,
+            choixDeLaMontre: false,
+            choixDuCarnet: false,
+        })
+    }, [])
+
     const value = useMemo<ContextType>(() => ({
         informations,
         updateInformations,
         newInformation,
         closeNewInformation,
+        resetInformations,
     }), [
         informations,
         updateInformations,
         newInformation,
         closeNewInformation,
+        resetInformations
     ])
 
     return (

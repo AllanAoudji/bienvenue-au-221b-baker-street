@@ -8,6 +8,25 @@ type Props = {
     reward?: Information;
 }
 
+const DISPLAY_TEXT = (info: Information) => {
+    switch (info) {
+        case "experiences":
+            return "Vous avez récupéré le souvenir des expériences professionelles";
+        case "hobbies":
+            return "Vous avez récupéré le souvenir des hobbies et des savoirs-êtres";
+        case "informations":
+            return "Vous avez récupéré le souvenir des informations personnelles";
+        case "skills":
+            return "Vous avez récupéré le souvenir des compétences et des langues";
+        default:
+        case "vuLEauDuSeau":
+        case "vuLesMiroirs":
+            return "Vous avez récupéré le souvenir de la photo de profile";
+        case "training":
+            return "Vous avez récupéré le souvenir des formations";
+    }
+}
+
 function RewardModal ({reward}: Props) {
     const {handleOpen} = useContext(ProfileModalContext);
     const {updateInformations, closeNewInformation} = useContext(ProfileInformationContext);
@@ -17,7 +36,7 @@ function RewardModal ({reward}: Props) {
     const handleClick = useCallback(() => {
         handleOpen();
         closeNewInformation();
-    }, [handleOpen, closeNewInformation])
+    }, [handleOpen, closeNewInformation]);
 
     useLayoutEffect(() => {
         if (!mounted.current) {
@@ -35,20 +54,18 @@ function RewardModal ({reward}: Props) {
 
     }, [updateInformations, reward]);
 
-    if (!showModal) {
+    if (!showModal || !reward) {
         return null
     }
 
-    return (
-        <div className="mt-10 text-center italic font-light ">
-            <p className="pb-3 text-2xl font-bold mb-2">Vous avez récupéré le souvenir de votre {reward}</p>
-            <div className="p-2 border-2 border-white inline-block">
-                <p onClick={handleClick} className="text-xl cursor-pointer inline-block font-light border-white border-2 px-5 py-2 transition-all duration-300 text-white hover:bg-white hover:text-black">
-                    Consultez votre profil pour le voir
-                </p>
-            </div>
+    <div className="mt-10 text-center italic font-light ">
+        <p className="pb-3 text-xl font-bold mb-2 sm:text-2xl">{DISPLAY_TEXT(reward)}</p>
+        <div className="p-2 border-2 border-white inline-block">
+            <p onClick={handleClick} className="text-lg sm:text-xl cursor-pointer inline-block font-light border-white border-2 px-5 py-2 transition-all duration-300 text-white hover:bg-white hover:text-black">
+                Consultez votre profil pour le voir
+            </p>
         </div>
-    );
+    </div>
 }
 
 export default RewardModal;

@@ -11,7 +11,7 @@ function ProfilePicture() {
 
     return (
         <div className="w-32 h-32 rounded-full bg-gray-200 overflow-hidden">
-            {!!informations.profilePicture && <Image alt="photo de profile" className="w-full h-auto" src={PP} />}
+            {(!!informations.vuLEauDuSeau || !!informations.vuLesMiroirs) && <Image alt="photo de profile" className="w-full h-auto" src={PP} />}
         </div>
     )
 }

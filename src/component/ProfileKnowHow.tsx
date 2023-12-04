@@ -7,7 +7,7 @@ import ProfileRunningText from "./ProfileRunningText";
 function ProfileKnowHow() {
     const {informations} = useContext(ProfileInformationContext)
     return (
-        !!informations.knowHow ? <div className="mt-4">
+        !!informations.hobbies ? <div className="mt-4">
             <ProfileHeader underline={false} title="Savoir-être" />
             <ProfileRunningText>
                 Polyvalent, ambitieux,

@@ -4,7 +4,7 @@ type Props = {
 }
 
 function ProfileHeader({title, underline = true}: Props) {
-    return <h2 className={`font-black text-xl border-black ${underline ? "border-b-2 mb-2" : ""}`}>{title}</h2>
+    return <h2 className={`font-black text-lg border-black sm:text-xl ${underline ? "border-b-2 mb-2" : ""}`}>{title}</h2>
 }
 
 export default ProfileHeader;

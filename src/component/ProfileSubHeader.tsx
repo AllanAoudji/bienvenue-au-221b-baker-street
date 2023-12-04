@@ -3,7 +3,7 @@ type Props = {
 }
 
 function ProfileSubHeader({title}: Props) {
-    return <h3>{title}</h3>
+    return <h3 className="text-sm sm:text-base">{title}</h3>
 }
 
 export default ProfileSubHeader;
