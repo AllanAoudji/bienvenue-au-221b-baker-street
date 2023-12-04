@@ -22,7 +22,7 @@ function Page ({params}: Props) {
                         <div className="text-center border-2 bg-white text-black p-10 ">
                             <p className="text-2xl pb-4">Merci d&apos;avoir joué à</p>
                             <h1 className="italic text-4xl text-bold">Bienvenue au 221b Baker Street</h1>
-                            <p className="text-2xl pt-10">J&apos;espère que cette aventure vous auras plu</p>
+                            <p className="text-2xl pt-10">J&apos;espère que cette aventure vous aura plu</p>
                         </div>
                     </div>
                 </div>
