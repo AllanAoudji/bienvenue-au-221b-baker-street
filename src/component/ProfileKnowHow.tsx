@@ -13,7 +13,8 @@ function ProfileKnowHow() {
                 Polyvalent, ambitieux,
                 sens du relationnel,
                 travail en équipe,
-                autonome, empathique
+                autonome, empathique,
+                curieux
             </ProfileRunningText>
         </div> : <ProfileMocked numOfLine={2} />
     )
