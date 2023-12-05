@@ -492,7 +492,7 @@ const useContent: (id: string) => Content | null = (id) => {
             }
         case "33":
             return {
-                text: "L’homme qui est là avec vous dans cette pièce est la personne que vous avez vu dans les miroirs apparus d’un claquement de doigt de Joie. Cet homme, c’est vous. L’homme vous regarde, vous vous regardez. L’un d’entre vous ne peut-être que le reflet de l’autre, pas vrai ? L’un d’entre vous est forcement une illusion. Vous êtes si proche de comprendre qui vous êtes.",
+                text: "L’homme qui est là avec vous dans cette pièce est la personne que vous avez vu dans les miroirs apparus d’un claquement de doigts de Joie. Cet homme, c’est vous. L’homme vous regarde, vous vous regardez. L’un d’entre vous ne peut-être que le reflet de l’autre, pas vrai ? L’un d’entre vous est forcement une illusion. Vous êtes si proche de comprendre qui vous êtes.",
                 responses: [
                     {
                         id: "1",
