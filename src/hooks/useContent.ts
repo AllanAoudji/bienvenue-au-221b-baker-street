@@ -461,7 +461,7 @@ const useContent: (id: string) => Content | null = (id) => {
                         text: "Continuer",
                         to: "32",
                         condition: {
-                            not: ["vuLEauDuSeau"]
+                            not: ["vuLesMiroirs"]
                         }
                     },
                     {
@@ -469,7 +469,7 @@ const useContent: (id: string) => Content | null = (id) => {
                         text: "Continuer",
                         to: "33",
                         condition: {
-                            not: ["vuLesMiroirs"]
+                            not: ["vuLEauDuSeau"]
                         }
                     },
                 ]
