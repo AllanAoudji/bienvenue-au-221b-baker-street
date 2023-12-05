@@ -36,10 +36,10 @@ function ProfileExperiences() {
             </div>
 
             <div className="mb-3">
-                <ProfileRunningText>2022 - 2023</ProfileRunningText>
-                <ProfileSubHeader title="Graphiste print & numérique/Webdesigner/Pigiste freelance" />
+                <ProfileRunningText>2021 - 2023</ProfileRunningText>
+                <ProfileSubHeader title="Graphiste print & numérique/webdesigner/pigiste freelance" />
                 <ProfileRunningText className="pl-12">
-                    Réalisation d’objets imprimés, de refontes et de modernisations graphiques, d’outils de communications adaptés, et de conception d’identités visuelles, mise en place d’outil d’UX design.
+                    Réalisation d’objets imprimés, de refontes et de modernisations graphiques, d’outils de communication adaptés, et de conception d’identités visuelles, mise en place d’outil d’UX design.
                 </ProfileRunningText>
             </div>
 

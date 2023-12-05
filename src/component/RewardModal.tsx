@@ -13,7 +13,7 @@ const DISPLAY_TEXT = (info: Information) => {
         case "experiences":
             return "Vous avez récupéré le souvenir des expériences professionelles";
         case "hobbies":
-            return "Vous avez récupéré le souvenir des hobbies et des savoirs-êtres";
+            return "Vous avez récupéré le souvenir des hobbies et des savoir-être";
         case "informations":
             return "Vous avez récupéré le souvenir des informations personnelles";
         case "skills":
@@ -21,7 +21,7 @@ const DISPLAY_TEXT = (info: Information) => {
         default:
         case "vuLEauDuSeau":
         case "vuLesMiroirs":
-            return "Vous avez récupéré le souvenir de la photo de profile";
+            return "Vous avez récupéré le souvenir de la photo de profil";
         case "training":
             return "Vous avez récupéré le souvenir des formations";
     }
