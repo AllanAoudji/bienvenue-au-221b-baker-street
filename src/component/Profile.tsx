@@ -26,12 +26,12 @@ function Profile ({onClick, showProfile}: Props) {
                 className="absolute bg-black bg-opacity-70 cursor-pointer inset-0"
                 onClick={onClick}
             />
-            <div className="absolute bg-white inset-y-0 left-0 overflow-auto p-7 text-black max-w-full md:max-w-none">
+            <div className="absolute bg-white inset-y-0 left-0 overflow-auto p-4 text-black max-w-full md:max-w-none sm:p-7">
                 <div className="flex justify-end">
                     <div onClick={onClick} className="cursor-pointer">X</div>
                 </div>
                 <div className="flex gap-x-4">
-                    <div className="flex-0 w-40">
+                    <div className="flex-0 w-32 sm:w-40">
                         <ProfilePicture />
                         <ProfileInformation />
                         <ProfileSkills />
