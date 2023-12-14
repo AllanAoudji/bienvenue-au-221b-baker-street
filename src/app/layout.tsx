@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter, Fraunces } from 'next/font/google'
+import { Fraunces } from 'next/font/google'
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 const fraunces = Fraunces({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <div className='bg-cover bg-no-repeat grow bg-center flex flex-col' style={{backgroundImage: `url('/Background.png')`}}>
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   )
